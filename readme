@@ -1,0 +1,24 @@
+Looking to use the Mavenlink API; http://developer.mavenlink.com/beta/
+
+
+Fetching all projects
+API - http://developer.mavenlink.com/beta/#tag/Workspaces%2Fpaths%2F~1workspaces%2Fget
+Query params
+ - archived ('exclude' to not have them returned and only current shown) --- This may be redundant looking at the `include_archived` param
+ - for_approver (only returns project that are associated with the user, e.g. the person authorized)
+ - per_page (default is 20)
+ - search (test this to see if you can add in a string that matches the project!!!)
+
+Fetching a list of participants for a specific project
+API - http://developer.mavenlink.com/beta/#tag/Participations
+Query params
+ - workspace_id {required} (id of the project)
+
+Getting a list of time entries
+ API - http://developer.mavenlink.com/beta/#tag/Time-Entries
+ Query params
+  - created_after (datetime from)
+  - created_before (datetime to)
+  - with_user_ids (specify users)
+  - workspace_id (a specific project)
+
